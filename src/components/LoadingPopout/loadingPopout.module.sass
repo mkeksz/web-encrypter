@@ -1,0 +1,34 @@
+.loadingPopout
+  display: flex
+  place-items: center
+  place-content: center
+  position: absolute
+  left: 0
+  top: 0
+  width: 100vw
+  height: 100vh
+  background: rgba(135, 135, 135, .30)
+  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, .37)
+  backdrop-filter: blur(1px)
+
+.loader
+  display: inline-block
+  width: 80px
+  height: 80px
+
+.loader:after
+  content: " "
+  display: block
+  width: 64px
+  height: 64px
+  margin: 8px
+  border-radius: 50%
+  border: 6px solid
+  border-color: rgba(255, 255, 255, .8) transparent rgba(255, 255, 255, .8) transparent
+  animation: loader 1.2s linear infinite
+
+@keyframes loader
+  0%
+    transform: rotate(0deg)
+  100%
+    transform: rotate(360deg)
